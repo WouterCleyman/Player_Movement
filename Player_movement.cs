@@ -31,4 +31,8 @@ public class Player_movement : MonoBehaviour {
         controller.Move(horizontalMove*Time.fixedDeltaTime,false,jump);
         jump = false;
     }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Destroy(other.gameObject);
+    }
 }
